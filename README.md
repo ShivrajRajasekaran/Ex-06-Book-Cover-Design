@@ -19,141 +19,119 @@ Write down the code for book cover using HTML and CSS.
 Add images and other contents using CSS record a screenshot of it.
 
 ## Code:
-````
+``````
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport"
-        content="width=device-width,initial-scale=1.0">
-        <style>
-        
-            .bookpage {
-                width: 400px;
-                height: 600px;
-                color: white; /* Change text color to make it visible on the background */
-                margin-left: auto;
-                margin-right: auto;
-                padding: 20px;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                background: linear-gradient(hwb(322 0% 76%), rgb(6, 244, 18)), url('../images/back.jpg');
-                background-size: cover;
-                position: relative;
-            }
-            
-            /* Add a pseudo-element to create an overlay on the background image */
-            .bookpage::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-            }
-            
+<html>
+<head>
+    <style>
+       .image{
+        margin-left: 450px;
+        margin-top: 25px;
+       }
+       .img2{
+        filter: brightness(50%);opacity: 95%;
+       }
+       .h1{
+        position: absolute;
+        top: 45px;
+        left: 470px;
+        font-style: italic;
+        font-size: large;
+        color: azure;
+       }
+       .line1{
+        position: absolute;
+        top: 65px;
+        left: 460px;
+       }
+       .para{
+        position: absolute;
+        top: 100px;
+        left: 500px;
+        font-size: larger;
+        font-style: bold;
+        color: cornsilk;
+        line-height: 20px;
+       }
+       .para2{
+        position: absolute;
+        top: 220px;
+        left: 500px;
+        font-size: large;
+        font-style: italic;
+        color: bisque;
+        line-height: 15px;
+       }
+       .line3{
+        position: absolute;
+        bottom: 90px;
+        left: 460px;
+       }
+       .edition{
+        position: absolute;
+        bottom: 100px;
+        left: 480px;
+        font-style: oblique;
+        font-size: large;
+        color: rgb(17, 255, 0);
+        line-height: 10px;
+       }
+       .imgaut{
+        position: absolute;
+        bottom: 100px;
+        left: 900px;
+       } 
+       .name{
+        position: absolute;
+        bottom: 41px;
+        left: 475px;
+        font-size: x-large;
+        font-style: bold;
+        color: rgb(148, 237, 31);
+       }
+    </style>
+</head>
+<body>
+    <div class="image">
+    <div class="img2"> 
+    <img src="c:\Users\admin\Pictures\images\black-red-texture-wallpaper.jpg" width="600px" height="700px">
+    </div>
+    <div class="h1">
+        SEC Insight
+    </div>
+    <div class="line1">
+        <hr width="120px" height="30px" color="red">
+    </div>
+    <div class="para">
+        <h1>WEB APPLICATION</h1> 
+        <h1>DEVELOPMENT</h1>
+        <hr width="500px" height="50px" color="dark red">
+    </div>
+    <div class="para2">
+        <h2>HTML & CSS COMBINED</h2>
+        <h2>WITH DJANGO ARCHITECTURE</h2>
+    </div>
+    <div class="edition">
+        <h3>TENTH Edition</h3>
+    </div>
+    <div class="line3">
+        <hr width="597px" height="100px" color="orange">
+    </div>
+    <div class="imgaut">
+        <img src="c:\Users\admin\Pictures\Saved Pictures\SHIV.jpg"width="130px" height="130px">
+    </div>
+    <div class="name">
+        <h4><strong>SHIVRAJ R</strong></h4>
+    </div>
+    </div>
     
+</body>
 
-        .insight{
-            color: hwb(191 0% 0%);
-
-        }
-
-        .hrstyle{
-            width: 100px;
-        }
-
-        .author{
-            color: white;
-            display: inline;
-            position: relative;
-            color: #00ffd9;
-            top: 190px;
-
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: medium;
-        }
-        .booktitle{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: larger;
-            text-align: center;
-            position: relative;
-            top: 30px;
-        }
-
-        .id{
-            width: 400px;
-            position: relative;
-            top: 180px;
-
-        }
-
-        .pub{
-            font-size: medium;
-            position: relative;
-            top: 155px;
-            left: 330px;
-        }
-        .ed{
-            color: rgb(229, 255, 0);
-            font-size: medium;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            position: relative;
-            top: 85px;
-
-        }
-        .subtile{
-            font-family: Tahoma;
-            font-size: large;
-            position: relative;
-            top: 40px;
-        }
-        .mypic{
-            position: relative;
-            top: 135px;
-            left: 260px;
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-        }
-        </style>
-        <title>Book Cover Page</title>
-    </head>
-    <body>
-        <div class="bookpage">
-            <div class="insight">
-                SEC INSIGHT
-            </div>
-            <div class="hrstyle">
-                <hr style="color: rgb(170, 255, 0);">
-            </div>
-            <div class="booktitle">
-                <h1>The Future of Web Application Development</h1>
-            </div>
-            <div class="subtitle">
-            **HTML & CSS Combined with Django Architechture**
-            </div>
-            <div class="mypic">
-                <img src="c:\Users\admin\Desktop\WhatsApp Image 2023-11-25 at 17.19.37_52098666.jpg" width="130" height="145" alt="">
-            </div>
-            <div class="id">
-                <hr style="color: orange;">
-            </div>
-            <div class="author">
-                <p><b>SHIVRAJ</b></p>
-            </div>
-            <div class="pub">
-                SEC
-            </div>
-            <div class="ed">
-                <b>Tenth Edition</b>
-            </div>
-        </div>
-    </body>
 </html>
-`````
+``````
 
 ## OUTPUT:
-![Alt text](htmlcss.png)
+![Alt text](SED.png)
 
 ## RESULT:
 Thus the Book cover program is executed successfully.
